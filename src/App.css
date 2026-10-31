@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 60px 25px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 45px;
+}
+
+.palette-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.color-card {
+  width: 190px;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.color-box {
+  height: 220px;
+  width: 100%;
+}
+
+.color-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 12px;
+}
+
+.color-code {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.copy-button {
+  border: none;
+  background: #eef0f5;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.copy-button:hover {
+  background: #dce1eb;
+}
+
+.generate-button {
+  background: #6254e8;
+  color: white;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(98, 84, 232, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.generate-button:hover {
+  background: #4d40ce;
+  transform: translateY(-2px);
+}
+
+.generate-button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 40px 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .color-card {
+    width: calc(50% - 10px);
+    min-width: 140px;
+  }
+
+  .color-box {
+    height: 160px;
+  }
+
+  .color-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
